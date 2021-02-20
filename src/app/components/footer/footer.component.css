@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(252, 142, 102);
+    border-top: 1px solid black;
+    padding: 5px;
+}
+
+.plan{
+    display: flex;
+    flex-direction: column;
+}
+
+h5{
+    text-align: center;
+}

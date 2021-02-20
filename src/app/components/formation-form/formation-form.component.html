@@ -1,0 +1,28 @@
+<form [formGroup]="formationForm" (ngSubmit)="onSubmit()">
+    <h3>Formation</h3>
+    <div class="nom-formation">
+        <label>Nom</label>
+        <input type="text" formControlName="nom">
+    </div>
+    <div class="theme-formation">
+        <label>Theme</label>
+        <input type="text" formControlName="theme">
+    </div>
+    <div class="duree-formation">
+        <label>duree (demi journée)</label>
+        <input type="text" formControlName="duree">
+    </div>
+    <div class="prix-formation">
+        <label>Prix</label>
+        <input type="text" formControlName="prix">
+    </div>
+    <div class="nom-formation">
+        <label>Date</label>
+        <input type="date" formControlName="date">
+    </div>
+    <div class="description-formation">
+        <label>Description</label>
+        <input type="text" formControlName="description">
+    </div>
+    <button type="submit">Ajouter la formation au catalogue</button>
+</form>

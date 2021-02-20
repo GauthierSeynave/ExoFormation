@@ -1,0 +1,25 @@
+<div class="carte-formation-container">
+    <div class="formation-nom">
+        <h3>Formation {{ formation.nom }} </h3>
+    </div>
+    <div class="formation-theme">
+        <h4>Theme {{ formation.theme }} </h4>
+    </div>
+    <div class="formation-duree">
+        <p> Durée de la formation en demi-journée : {{ formation.duree }} </p>
+    </div>
+    <div class="formation-date">
+        <p> Début de la formation le  {{ formation.date }} </p>
+    </div>
+    <div *ngIf="details === true">
+        <div class="formation-prix">
+            <p> {{ formation.prix }} </p>
+        </div>
+        <div class="formation-prix">
+            <p> {{ formation.description }} </p>
+        </div>
+    </div>
+    <div class="formation-description" *ngIf="details === false">
+        <button type="button" (click)="onConsulterDetail(formation)">Consulter le détail de la formation</button>
+    </div>
+</div>
