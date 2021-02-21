@@ -1,5 +1,13 @@
-<nav class="navbar">
-    <a class="nav-link" routerLink="">Accueil</a>
-    <a class="nav-link formulaire" routerLink="/formulaireFormation">Formulaire de formation</a>
-    <a class="nav-link formation" routerLink="/listeFormation">Liste des formations</a>
-</nav>
+<div class="navbar-container">
+  <mat-sidenav-container class="navbar">
+      <mat-sidenav-content class="accueil">
+        <a mat-stroked-button color="primary" class="nav-link" style="width : 100%;" routerLink="">Accueil</a>
+      </mat-sidenav-content>
+      <mat-sidenav-content class="formulaire">
+        <a mat-stroked-button color="primary" class="nav-link" style="width : 100%;" routerLink="/formulaireFormation">Formulaire de formation</a>
+      </mat-sidenav-content>
+      <mat-sidenav-content class="formation">
+        <a mat-stroked-button color="primary" class="nav-link" style="width : 100%;" routerLink="/listeFormation">Liste des formations</a>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

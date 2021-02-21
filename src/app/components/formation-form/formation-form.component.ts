@@ -5,7 +5,7 @@ import { HttpFormationService } from 'src/app/services/http-formation.service';
 @Component({
   selector: 'app-formation-form',
   templateUrl: './formation-form.component.html',
-  styleUrls: ['./formation-form.component.css']
+  styleUrls: ['./formation-form.component.scss']
 })
 export class FormationFormComponent implements OnInit {
 
@@ -32,6 +32,9 @@ export class FormationFormComponent implements OnInit {
     .subscribe(Response =>{
       console.log(this.formationForm.value);
     })
+    this.formationForm.reset();
     }
+
+
 
 }

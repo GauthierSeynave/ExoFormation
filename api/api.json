@@ -2,21 +2,12 @@
   "formations": [
     {
       "id": 1,
-      "nom": "Java Junior",
-      "theme": "Developpement Web",
-      "duree": "10",
-      "prix": "350€",
-      "date": "2021-02-22",
-      "description": "Formation débutant Java"
-    },
-    {
-      "id": 2,
-      "nom": "nomTest",
-      "theme": "themeTest",
-      "duree": "15",
-      "prix": "200€",
-      "date": "2021-02-20",
-      "description": "DescriptionTest"
+      "nom": "",
+      "theme": "",
+      "duree": null,
+      "prix": null,
+      "date": "",
+      "description": ""
     }
   ]
 }

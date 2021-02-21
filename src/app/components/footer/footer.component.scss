@@ -1,17 +1,16 @@
 .footer{
+    height: 10vh;
+    font-size: 11px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(252, 142, 102);
-    border-top: 1px solid black;
+    align-items: flex-start;
+    background-color: #C2185B;
     padding: 5px;
 }
 
 .plan{
     display: flex;
     flex-direction: column;
-}
-
-h5{
-    text-align: center;
+    align-items: center;
 }

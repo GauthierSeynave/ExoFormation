@@ -1,28 +1,37 @@
-<form [formGroup]="formationForm" (ngSubmit)="onSubmit()">
-    <h3>Formation</h3>
-    <div class="nom-formation">
-        <label>Nom</label>
-        <input type="text" formControlName="nom">
-    </div>
-    <div class="theme-formation">
-        <label>Theme</label>
-        <input type="text" formControlName="theme">
-    </div>
-    <div class="duree-formation">
-        <label>duree (demi journée)</label>
-        <input type="text" formControlName="duree">
-    </div>
-    <div class="prix-formation">
-        <label>Prix</label>
-        <input type="text" formControlName="prix">
-    </div>
-    <div class="nom-formation">
-        <label>Date</label>
-        <input type="date" formControlName="date">
-    </div>
-    <div class="description-formation">
-        <label>Description</label>
-        <input type="text" formControlName="description">
-    </div>
-    <button type="submit">Ajouter la formation au catalogue</button>
-</form>
+<div class="formulaire-carte">
+    <mat-card class="form-card-container">
+        <form class="form-container" [formGroup]="formationForm" (ngSubmit)="onSubmit()">
+            <div class="form-field">
+                <h3>Formation</h3>
+                <mat-form-field class="nom-formation">
+                    <mat-label>Nom</mat-label>
+                    <input matInput type="text" formControlName="nom" placeholder="Java débutant">
+                </mat-form-field>
+                <mat-form-field class="theme-formation">
+                    <mat-label>Theme</mat-label>
+                    <input matInput type="text" formControlName="theme" placeholder="Développement Web">
+                </mat-form-field>
+                <mat-form-field class="duree-formation">
+                    <mat-label>Duree</mat-label>
+                    <input matInput type="number" formControlName="duree" placeholder="X demi-jounrée">
+                </mat-form-field>
+                <mat-form-field class="prix-formation">
+                    <mat-label>Prix</mat-label>
+                    <input matInput type="number" formControlName="prix">
+                    <span matSuffix>€&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field class="date-formation">
+                    <mat-label>Date</mat-label>
+                    <input matInput type="date" formControlName="date">
+                </mat-form-field>
+                <mat-form-field class="description-formation">
+                    <mat-label>Description</mat-label>
+                    <input matInput type="text" formControlName="description" placeholder="Formation portant sur...">
+                </mat-form-field>
+                <mat-card-actions class="submit">
+                    <button mat-raised-button color="primary" type="submit">Ajouter</button>
+                </mat-card-actions>
+            </div>
+        </form>
+    </mat-card>
+</div>

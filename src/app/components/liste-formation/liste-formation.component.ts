@@ -6,7 +6,7 @@ import { HttpFormationService } from 'src/app/services/http-formation.service';
 @Component({
   selector: 'app-liste-formation',
   templateUrl: './liste-formation.component.html',
-  styleUrls: ['./liste-formation.component.css']
+  styleUrls: ['./liste-formation.component.scss']
 })
 export class ListeFormationComponent implements OnInit {
 

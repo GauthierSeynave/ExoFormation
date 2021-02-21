@@ -1,25 +1,33 @@
-<div class="carte-formation-container">
+<div class="mat-card">
     <div class="formation-nom">
-        <h3>Formation {{ formation.nom }} </h3>
+        <mat-card-title>Formation {{ formation.nom }} </mat-card-title>
     </div>
     <div class="formation-theme">
-        <h4>Theme {{ formation.theme }} </h4>
+        <mat-card-subtitle>Theme {{ formation.theme }}</mat-card-subtitle>
     </div>
-    <div class="formation-duree">
-        <p> Durée de la formation en demi-journée : {{ formation.duree }} </p>
-    </div>
-    <div class="formation-date">
-        <p> Début de la formation le  {{ formation.date }} </p>
-    </div>
-    <div *ngIf="details === true">
-        <div class="formation-prix">
-            <p> {{ formation.prix }} </p>
+    <mat-card-content class="mat-card-content">
+        <div class="formation-duree">
+            <p> Durée  : {{ (formation.duree/2) }} jours </p>
         </div>
-        <div class="formation-prix">
-            <p> {{ formation.description }} </p>
+        <div class="formation-date">
+            <p> Début de la formation le  {{ formation.date }} </p>
         </div>
-    </div>
+        <div *ngIf="details === true">
+            <div class="formation-prix">
+                <p> Prix {{ formation.prix }} </p>
+            </div>
+            <div class="formation-prix">
+                <p> {{ formation.description }} </p>
+            </div>
+        </div>
+    </mat-card-content>
     <div class="formation-description" *ngIf="details === false">
-        <button type="button" (click)="onConsulterDetail(formation)">Consulter le détail de la formation</button>
+        <button mat-raised-button color="primary" type="submit" (click)="onConsulterDetail(formation)">Consulter le détail de la formation</button>
+    </div>
+    <div class="formation-description" *ngIf="details === true">
+        <button mat-raised-button color="primary" type="button" (click)="onRetourDetail()">Retour à la liste de formation</button>
+        <button mat-fab color="primary" type="button" (click)="onDeleteFormation(formation.id)">
+            <i class="material-icons md-18">delete</i>
+        </button>
     </div>
 </div>

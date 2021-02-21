@@ -16,4 +16,9 @@ export class HttpFormationService {
   save(formation: Formation) {
     return this.httpClient.post<Formation>('http://localhost:3000/formations', formation);
   }
+  
+  delete(id: number) {
+    return this.httpClient.delete(`http://localhost:3000/formations/${id}`)
+    .subscribe( () => console.log('Delete sucessful'));
+  }
 }

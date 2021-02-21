@@ -6,7 +6,7 @@ import { FormationService } from 'src/app/services/formation.service';
 @Component({
   selector: 'app-formation-details-page',
   templateUrl: './formation-details-page.component.html',
-  styleUrls: ['./formation-details-page.component.css']
+  styleUrls: ['./formation-details-page.component.scss']
 })
 export class FormationDetailsPageComponent implements OnInit {
 
